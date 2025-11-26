@@ -147,7 +147,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  pointer-events: none;
+  pointer-events: none; /* Mantém o pointer-events: none; para a thumbnail de VÍDEO */
   z-index: 0;
 }
 
@@ -156,6 +156,7 @@ h1 {
 }
 
 .video-label {
+  /* Mantido APENAS para o botão 'Adicionar Vídeo' */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -164,7 +165,7 @@ h1 {
   padding: 15px;
   text-align: center;
   z-index: 1;
-  pointer-events: none;
+  /* CORREÇÃO: Removendo o pointer-events: none daqui garante que o texto não bloqueie o clique no botão Adicionar */
 }
 
 /* Controles flutuantes */
@@ -197,6 +198,32 @@ h1 {
   background: rgba(50, 50, 50, 0.9);
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
+}
+
+/* Indicador de carregamento */
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+
+.loading.active {
+  display: block;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
 }
 
 @keyframes spin {
