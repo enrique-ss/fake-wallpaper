@@ -33,11 +33,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  background: rgba(20, 20, 20, 0.95);
+  background: rgba(20, 20, 20, 0.404);
   padding: 50px 80px;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px); 
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: opacity 0.3s ease, transform 0.3s ease;
   width: 95vw;
@@ -63,7 +63,7 @@ h1 {
   margin-bottom: 30px;
   font-size: 28px;
   letter-spacing: 2px;
-  border-bottom: 2px solid #268cbb;
+  border-bottom: 2px solid #a82192;
   padding-bottom: 15px;
 }
 
