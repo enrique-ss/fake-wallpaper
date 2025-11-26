@@ -1,0 +1,2 @@
+@echo off
+start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --kiosk "file:///C:/Users/LUIZHENRIQUESILVEIRA/Desktop/Pessoal/fake-wallpaper-mp4/fake-wallpaper-mp4/index.html" --edge-kiosk-type=fullscreen --no-first-run
