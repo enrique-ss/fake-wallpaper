@@ -204,7 +204,7 @@
   }
   
   /* Responsivo */
-  @media (max-width: 900px) {
+  @media (max-width: 1400px) {
     .wallpaper-grid {
       grid-template-columns: 1fr;
     }
@@ -225,44 +225,5 @@
     .video-label {
       padding: 10px;
       font-size: 14px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #menu {
-      padding: 20px 15px;
-      border-radius: 15px;
-    }
-    
-    h1 {
-      font-size: 18px;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-    }
-    
-    .wallpaper-grid {
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-    
-    .wallpaper-btn {
-      min-height: 100px;
-      border-radius: 10px;
-    }
-    
-    .video-label {
-      padding: 8px;
-      font-size: 13px;
-    }
-    
-    #controls {
-      bottom: 15px;
-      right: 15px;
-      gap: 8px;
-    }
-    
-    .control-btn {
-      padding: 10px 15px;
-      font-size: 12px;
     }
   }
