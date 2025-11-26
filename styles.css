@@ -12,7 +12,6 @@ body {
   min-height: 100vh;
 }
 
-/* Video de fundo */
 #videoBackground {
   position: fixed;
   top: 0;
@@ -29,7 +28,7 @@ body {
   opacity: 1;
 }
 
-/* Menu */
+/* Menu principal */
 #menu {
   position: fixed;
   top: 50%;
@@ -49,23 +48,11 @@ body {
   overflow-x: hidden;
 }
 
-#menu::-webkit-scrollbar {
-  width: 10px;
-}
-
-#menu::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
-}
-
-#menu::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-#menu::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
+/* Scrollbar do menu */
+#menu::-webkit-scrollbar { width: 10px; }
+#menu::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 5px; }
+#menu::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 5px; }
+#menu::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
 
 #menu.hidden {
   opacity: 0;
@@ -116,7 +103,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* --- ESTILOS ESPECÍFICOS PARA O BOTÃO ADICIONAR --- */
+/* Estilos Adicionar Vídeo */
 .add-video-btn {
   display: flex;
   flex-direction: column;
@@ -137,7 +124,6 @@ h1 {
   transform: scale(1.2) rotate(90deg);
   color: #fff;
 }
-/* -------------------------------------------------- */
 
 .thumbnail {
   position: absolute;
@@ -147,7 +133,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  pointer-events: none; /* Mantém o pointer-events: none; para a thumbnail de VÍDEO */
+  pointer-events: none; /* ESSENCIAL: Permite que o clique atravesse a thumbnail e atinja o botão */
   z-index: 0;
 }
 
@@ -156,7 +142,7 @@ h1 {
 }
 
 .video-label {
-  /* Mantido APENAS para o botão 'Adicionar Vídeo' */
+  /* Mantido para o texto 'Adicionar Vídeo' */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -165,7 +151,7 @@ h1 {
   padding: 15px;
   text-align: center;
   z-index: 1;
-  /* CORREÇÃO: Removendo o pointer-events: none daqui garante que o texto não bloqueie o clique no botão Adicionar */
+  /* CORREÇÃO: Removido 'pointer-events: none;' para permitir o clique no botão Adicionar */
 }
 
 /* Controles flutuantes */
@@ -200,7 +186,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* Indicador de carregamento */
+/* Indicador de carregamento (REINTEGRADO) */
 .loading {
   position: fixed;
   top: 50%;
