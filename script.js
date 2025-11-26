@@ -98,19 +98,13 @@ function enterFullscreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen().catch(err => {
       console.log('Não foi possível entrar em tela cheia automaticamente:', err.message);
-      // Tentar novamente após 500ms
-      setTimeout(enterFullscreen, 500);
     });
   }
 }
 
 // Atalhos de teclado
 document.addEventListener('keydown', function(e) {
-  // Bloquear F11 e ESC para não sair da tela cheia
-  if (e.key === 'F11') {
-    e.preventDefault();
-  }
-  
+  // Permitir F11 para tela cheia nativa do navegador
   if (e.key === 'Escape') {
     e.preventDefault();
     // Se não estiver no menu, voltar para o menu
@@ -119,13 +113,5 @@ document.addEventListener('keydown', function(e) {
     }
   } else if (e.key === 'm' || e.key === 'M') {
     goBack();
-  }
-});
-
-// Garantir que sempre volte para tela cheia
-document.addEventListener('fullscreenchange', function() {
-  // Se saiu da tela cheia e há um vídeo ativo, voltar para tela cheia
-  if (!document.fullscreenElement && video.classList.contains('active')) {
-    setTimeout(enterFullscreen, 100);
   }
 });
