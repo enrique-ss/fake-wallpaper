@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallpapers Animados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Video de fundo -->
+  <video id="videoBackground" autoplay loop muted playsinline>
+    <source id="videoSource" type="video/mp4">
+  </video>
+
+  <!-- Menu de seleção -->
+  <div id="menu">
+    <h1>SELECIONE UM WALLPAPER</h1>
+    <div class="wallpaper-grid">
+      <button class="wallpaper-btn" data-video="video1.mp4">
+        <video class="thumbnail" muted playsinline>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <span class="video-label">Vídeo 1</span>
+      </button>
+      <button class="wallpaper-btn" data-video="video2.mp4">
+        <video class="thumbnail" muted playsinline>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <span class="video-label">Vídeo 2</span>
+      </button>
+      <button class="wallpaper-btn" data-video="video3.mp4">
+        <video class="thumbnail" muted playsinline>
+          <source src="video3.mp4" type="video/mp4">
+        </video>
+        <span class="video-label">Vídeo 3</span>
+      </button>
+      <button class="wallpaper-btn" data-video="video4.mp4">
+        <video class="thumbnail" muted playsinline>
+          <source src="video4.mp4" type="video/mp4">
+        </video>
+        <span class="video-label">Vídeo 4</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Indicador de carregamento -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div>Carregando vídeo...</div>
+  </div>
+
+  <!-- Controles flutuantes -->
+  <div id="controls">
+    <button class="control-btn" onclick="goBack()">← Voltar</button>
+    <button class="control-btn" onclick="toggleFullscreen()">⛶ Tela Cheia</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
